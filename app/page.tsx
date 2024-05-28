@@ -1,9 +1,12 @@
-import React from 'react'
+import Circle from "@/components/divider";
+import Intro from "@/components/intro";
+import React from "react";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>page</div>
-  )
+    <main className="flex flex-col item-center">
+      <Intro />
+      <Circle />
+    </main>
+  );
 }
-
-export default page
