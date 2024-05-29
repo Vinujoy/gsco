@@ -20,6 +20,47 @@ html.dark {
   -webkit-text-fill-color: transparent;
 }
 
-.clip-half-circle {
-  clip-path: circle(50% at 50% 100%);
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/*Mraguee slider*/
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  align-items: center; /* Center align items vertically */
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  align-items: center; /* Center align items vertically */
+}
+
+.marquee-content img {
+  margin-right: 20px;
+  height: 100px; /* Set a fixed height for the images */
+  width: auto;
 }
